@@ -1,21 +1,14 @@
-var mysql = require('mysql')
+const Sequelize = require('sequelize');
 
-var db = mysql.createConnection({
+const db = new Sequelize('nwp','root', '',{
   host: '127.0.0.1',
-  user: 'root',
-  password: '',
-  database: 'nwp',
-  multipleStatements: true
+  dialect: 'mysql',
 })
 
-db.connect((err) => {
-  if(!err){
-    console.log('DB connection succeded')
-  }
-  else {
-    console.log('DB connection failed \n Error' + JSON.stringify(err, undefined, 2))
-  }
-})
+db.authenticate().then(() =>{
+  console.log("Database connected")
+}).catch((err) => {
+  console.log("error: "+ err)
+});
 
 module.exports = db
-
