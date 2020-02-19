@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { ApiService } from 'src/app/core/http/api.service';
 
 
@@ -15,7 +16,8 @@ export class EconomyComponent implements OnInit {
   constructor(private apiService: ApiService) { }
 
   ngOnInit() {
-    this.apiService.getUnits().subscribe(data => console.log(data))
-
+    this.apiService.getUnits()
+      .subscribe(data => this.units = data);
   }
+
 }

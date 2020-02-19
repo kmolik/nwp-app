@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
 
-  private url: 'http://localhost:3000/jednostki';
+  private url = 'http://localhost:3000/jednostki';
 
   constructor(private http: HttpClient) {}
 
