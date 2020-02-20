@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ModulesRoutingModule } from './modules-routing.module';
 import { FinancialComponent } from './components/financial/financial.component';
 import { EconomyComponent } from './components/economy/economy.component';
+import { MaterialModule } from 'src/app/core/material/material.module';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { EconomyComponent } from './components/economy/economy.component';
     EconomyComponent],
   imports: [
     CommonModule,
-    ModulesRoutingModule
+    ModulesRoutingModule,
+    MaterialModule
   ],
   exports: [
     FinancialComponent,
