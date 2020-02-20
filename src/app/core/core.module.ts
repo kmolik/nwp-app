@@ -9,10 +9,18 @@ import { MaterialModule } from './material/material.module';
 
 
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent],
+  declarations: [
+    HeaderComponent,
+    FooterComponent
+  ],
   imports: [
     CommonModule,
     CoreRoutingModule,
+    MaterialModule
+  ],
+  exports: [
+    HeaderComponent,
+    FooterComponent,
     MaterialModule
   ],
   providers: [

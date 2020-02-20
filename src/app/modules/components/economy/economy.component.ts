@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
 import { ApiService } from 'src/app/core/http/api.service';
-
 
 
 @Component({
