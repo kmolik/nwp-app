@@ -6,13 +6,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from './core/core.module';
-import { ModulesModule } from './modules/modules.module';
+import { EconomyModule } from './modules/economy/economy.module';
+
+
+
 
 
 @NgModule({
   declarations: [
     AppComponent
-
   ],
   imports: [
     BrowserModule,
@@ -20,7 +22,7 @@ import { ModulesModule } from './modules/modules.module';
     NoopAnimationsModule,
     HttpClientModule,
     CoreModule,
-    ModulesModule
+    EconomyModule
   ],
   providers: [],
   bootstrap: [AppComponent]

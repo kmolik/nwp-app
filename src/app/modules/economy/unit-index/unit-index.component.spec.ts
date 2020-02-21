@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FinancialComponent } from './financial.component';
+import { UnitIndexComponent } from './unit-index.component';
 
-describe('FinancialComponent', () => {
-  let component: FinancialComponent;
-  let fixture: ComponentFixture<FinancialComponent>;
+describe('UnitIndexComponent', () => {
+  let component: UnitIndexComponent;
+  let fixture: ComponentFixture<UnitIndexComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FinancialComponent ]
+      declarations: [ UnitIndexComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FinancialComponent);
+    fixture = TestBed.createComponent(UnitIndexComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
