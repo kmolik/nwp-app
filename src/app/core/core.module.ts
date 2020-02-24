@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { CoreRoutingModule } from './core-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { ApiService } from './http/api.service';
+import { UnitIndexService } from './http/unit_index.service';
 import { MaterialModule } from './material/material.module';
 
 
@@ -24,7 +24,7 @@ import { MaterialModule } from './material/material.module';
     MaterialModule
   ],
   providers: [
-    ApiService
+    UnitIndexService
   ]
 })
 export class CoreModule { }

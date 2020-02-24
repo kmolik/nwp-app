@@ -1,4 +1,4 @@
-const Sequelize = require('sequelize');
+const Sequelize = require('sequelize')
 var db = require('../connection/connect')
 
 const spis_jednostek = db.define('spis_jednostek', {

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from 'src/app/core/http/api.service';
+import { UnitIndexService } from 'src/app/core/http/unit_index.service';
 
 @Component({
   selector: 'app-unit-index',
@@ -8,14 +8,14 @@ import { ApiService } from 'src/app/core/http/api.service';
 })
 export class UnitIndexComponent implements OnInit {
 
-  displayedColumns: string[] = ['id', 'data_aktualizacji', 'nazwa_jednostki', 'adres_jednostki', 'uwagi'];
+  displayedColumns: string[] = ['id', 'nazwa_jednostki', 'adres_jednostki'];
 
   public units = [];
 
-  constructor(private apiService: ApiService) { }
+  constructor(private unitIndexService: UnitIndexService) { }
 
   ngOnInit() {
-    this.apiService.getUnits()
+    this.unitIndexService.getUnits()
       .subscribe(data => this.units = data);
   }
 

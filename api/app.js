@@ -7,6 +7,7 @@ app.use(cors())
 
 // db connection
 var spis_jednostek = require('./db/models/unit_index')
+var dzialki = require('./db/models/parcel')
 
 
 app.get('/jednostki', (req,res) => {
@@ -14,6 +15,14 @@ app.get('/jednostki', (req,res) => {
     res.json(spis_jednostek)
   })
 })
+
+app.get('/dzialki', (req, res) => {
+  dzialki.findAll().then((dzialki) =>{
+    res.json(dzialki)
+  })
+})
+
+
 
 
 app.listen(port, () => console.log(`Server is running at port 3000`))

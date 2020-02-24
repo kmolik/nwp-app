@@ -7,7 +7,8 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class ApiService {
+
+export class UnitIndexService {
 
   private url = 'http://localhost:3000/jednostki';
 
