@@ -8,6 +8,7 @@ app.use(cors())
 // db connection
 var spis_jednostek = require('./db/models/unit_index')
 var dzialki = require('./db/models/parcel')
+var budynki = require('./db/models/buildings')
 
 
 app.get('/jednostki', (req,res) => {
@@ -19,6 +20,12 @@ app.get('/jednostki', (req,res) => {
 app.get('/dzialki', (req, res) => {
   dzialki.findAll().then((dzialki) =>{
     res.json(dzialki)
+  })
+})
+
+app.get('/budynki', (req, res) => {
+  budynki.findAll().then((budynki) => {
+    res.json(budynki)
   })
 })
 

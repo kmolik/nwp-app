@@ -6,6 +6,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { UnitIndexService } from './http/unit_index.service';
 import { MaterialModule } from './material/material.module';
+import { ParcelService } from './http/parcel.service';
+import { BuildingsService } from './http/buildings.service';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { MaterialModule } from './material/material.module';
     MaterialModule
   ],
   providers: [
-    UnitIndexService
+    UnitIndexService,
+    ParcelService,
+    BuildingsService
   ]
 })
 export class CoreModule { }
