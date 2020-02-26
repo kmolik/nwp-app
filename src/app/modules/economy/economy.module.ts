@@ -12,6 +12,9 @@ import { EconomyRoutingModule } from './economy-routing.module';
     CommonModule,
     MaterialModule,
     EconomyRoutingModule
+  ],
+  exports: [
+    MaterialModule
   ]
 })
 export class EconomyModule { }
