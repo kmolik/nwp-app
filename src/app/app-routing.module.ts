@@ -4,9 +4,17 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'economy',
-    loadChildren: () => import('./modules/economy/economy.module').then(m => m.EconomyModule)
-  },
+    path: 'unit-index',
+    loadChildren: () => import('./modules/economy/unit-index/unit-index.module').then(m => m.UnitIndexModule)
+    },
+    {
+      path: 'parcel',
+      loadChildren: () => import('./modules/economy/parcel/parcel.module').then(m => m.ParcelModule)
+    },
+    {
+      path: 'buildings',
+      loadChildren: () => import('./modules/economy/buildings/buildings.module').then(m => m.BuildingsModule)
+    }
 ];
 
 @NgModule({
