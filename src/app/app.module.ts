@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from './core/core.module';
-import { EconomyModule } from './modules/economy/economy.module';
+
 
 
 
@@ -21,8 +21,7 @@ import { EconomyModule } from './modules/economy/economy.module';
     AppRoutingModule,
     NoopAnimationsModule,
     HttpClientModule,
-    CoreModule,
-    EconomyModule
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
