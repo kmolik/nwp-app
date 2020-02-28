@@ -1,22 +1,25 @@
 <h2>Lista jednostek</h2>
+<mat-card>
+  <table mat-table *ngFor="let unit of units">
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>{{unit.id}}</th>
+      <td mat-cell *matHeaderCellDef="let units" >{{unit.id}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="nazwa_jednostki">
+      <th mat-header-cell *matHeaderCellDef>{{unit.nazwa_jednostki}}</th>
+      <td mat-cell *matHeaderCellDef="let units">{{unit.nazwa_jednostki}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="adres_jednostki">
+      <th mat-header-cell *matHeaderCellDef>{{unit.adres_jednostki}}</th>
+      <td mat-cell *matHeaderCellDef="let units">{{unit.adres_jednostki}}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef= "let row; columns: displayedColumns"></tr>
+  </table>
+</mat-card>
 
 
-<table mat-table *ngFor="let unit of units">
-  <ng-container matColumnDef="id">
-    <th mat-header-cell *matHeaderCellDef>{{unit.id}}</th>
-    <td mat-cell *matHeaderCellDef="let units" >{{unit.id}}</td>
-  </ng-container>
 
-  <ng-container matColumnDef="nazwa_jednostki">
-    <th mat-header-cell *matHeaderCellDef>{{unit.nazwa_jednostki}}</th>
-    <td mat-cell *matHeaderCellDef="let units">{{unit.nazwa_jednostki}}</td>
-  </ng-container>
-
-  <ng-container matColumnDef="adres_jednostki">
-    <th mat-header-cell *matHeaderCellDef>{{unit.adres_jednostki}}</th>
-    <td mat-cell *matHeaderCellDef="let units">{{unit.adres_jednostki}}</td>
-  </ng-container>
-
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef= "let row; columns: displayedColumns"></tr>
-</table>
