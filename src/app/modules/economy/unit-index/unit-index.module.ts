@@ -2,13 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UnitIndexRoutingModule } from './unit-index-routing.module';
 import { MaterialModule } from 'src/app/core/material/material.module';
-import { TableComponent } from './unitsTable/unitsTable.component';
+import { UnitsTableComponent } from './unitsTable/unitsTable.component';
 
 
 
 @NgModule({
   declarations: [
-    TableComponent
+    UnitsTableComponent
   ],
   imports: [
     CommonModule,

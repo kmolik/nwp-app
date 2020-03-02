@@ -7,7 +7,7 @@ import { UnitIndexService } from 'src/app/core/http/unit_index.service';
   templateUrl: './unitsTable.component.html',
   styleUrls: ['./unitsTable.component.sass']
 })
-export class TableComponent implements OnInit {
+export class UnitsTableComponent implements OnInit {
 
   displayedColumns: string[] = ['id', 'unit_name', 'unitAdres'];
   dataSource = [];

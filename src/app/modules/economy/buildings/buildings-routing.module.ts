@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { UnitsTableComponent } from './unitsTable/unitsTable.component';
+import { BuildingsTableComponent } from './buildings-table/buildings-table.component';
 
 
 const routes: Routes = [
-  {path: 'table', component: UnitsTableComponent}
+  {path: 'buildings', component: BuildingsTableComponent}
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class UnitIndexRoutingModule { }
+export class BuildingsRoutingModule { }

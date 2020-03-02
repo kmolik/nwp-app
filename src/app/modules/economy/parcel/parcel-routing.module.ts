@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { UnitsTableComponent } from './unitsTable/unitsTable.component';
+import { ParcelTableComponent } from './parcel-table/parcel-table.component';
 
 
 const routes: Routes = [
-  {path: 'table', component: UnitsTableComponent}
+  {path: 'parcel', component: ParcelTableComponent}
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class UnitIndexRoutingModule { }
+export class ParcelRoutingModule { }
+
