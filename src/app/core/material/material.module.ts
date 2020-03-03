@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import {MatTableModule} from '@angular/material/table';
 import { MatButtonModule} from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 
 
@@ -9,7 +10,8 @@ import { MatCardModule } from '@angular/material/card';
 const material = [
   MatTableModule,
   MatButtonModule,
-  MatCardModule
+  MatCardModule,
+  MatPaginatorModule
 ];
 
 

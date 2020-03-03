@@ -4,7 +4,7 @@ import { BuildingsTableComponent } from './buildings-table/buildings-table.compo
 
 
 const routes: Routes = [
-  {path: 'buildings', component: BuildingsTableComponent}
+  {path: 'buildingsTable', component: BuildingsTableComponent}
 ];
 
 @NgModule({

@@ -9,7 +9,7 @@ import { UnitIndexService } from 'src/app/core/http/unit_index.service';
 })
 export class UnitsTableComponent implements OnInit {
 
-  displayedColumns: string[] = ['id', 'unit_name', 'unitAdres'];
+  displayedColumns: string[] = ['id', 'unit_name', 'unitAdres', 'action'];
   dataSource = [];
 
   constructor(private unitIndexService: UnitIndexService) { }

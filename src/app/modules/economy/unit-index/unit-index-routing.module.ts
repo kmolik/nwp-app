@@ -4,7 +4,7 @@ import { UnitsTableComponent } from './unitsTable/unitsTable.component';
 
 
 const routes: Routes = [
-  {path: 'table', component: UnitsTableComponent}
+  {path: 'unitTable', component: UnitsTableComponent}
 ];
 
 @NgModule({
