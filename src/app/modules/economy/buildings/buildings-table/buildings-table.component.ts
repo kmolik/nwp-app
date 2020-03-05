@@ -1,30 +1,31 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { BuildingsService } from 'src/app/core/http/buildings.service';
 import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
+import { Buildings } from 'src/app/core/models/buildings';
 
 @Component({
   selector: 'app-buildings-table',
   templateUrl: './buildings-table.component.html',
   styleUrls: ['./buildings-table.component.sass']
 })
-export class BuildingsTableComponent implements OnInit {
+export class BuildingsTableComponent implements OnInit, AfterViewInit {
 
   // tslint:disable-next-line: max-line-length
   displayedColumns: string[] = ['id', 'buildingID', 'buildingType', 'buildYear', 'parcelNumber', 'province', 'countie', 'commune', 'action'];
-  dataSource = [];
+  dataSource = new MatTableDataSource<Buildings>();
 
-  @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
-
-  pageSizeOptions: number[] = [5, 10, 25, 100];
+  @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
 
   constructor(private buildingsService: BuildingsService) { }
 
   ngOnInit() {
-    this.dataSource.paginator = this.paginator;
+
     this.buildingsService.getBuildings()
-      .subscribe(data => this.dataSource = data);
+      .subscribe((data: Buildings[]) => this.dataSource.data = data);
   }
 
-
-
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+  }
 }
