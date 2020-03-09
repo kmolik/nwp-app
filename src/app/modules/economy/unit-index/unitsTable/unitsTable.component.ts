@@ -5,6 +5,7 @@ import { UnitIndex } from 'src/app/core/models/unit_index';
 import { MatPaginator } from '@angular/material/paginator';
 
 
+
 @Component({
   selector: 'app-table',
   templateUrl: './unitsTable.component.html',
@@ -13,17 +14,16 @@ import { MatPaginator } from '@angular/material/paginator';
 export class UnitsTableComponent implements OnInit, AfterViewInit {
 
   displayedColumns: string[] = ['id', 'unit_name', 'unitAdres', 'action'];
-  dataSource: MatTableDataSource<UnitIndex>;
+  dataSource = new MatTableDataSource<UnitIndex>();
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
 
   constructor(private unitIndexService: UnitIndexService) { }
 
   ngOnInit() {
-    this.dataSource = new MatTableDataSource([]);
 
     this.unitIndexService.getUnits()
-      .subscribe(data => this.dataSource = new MatTableDataSource(data));
+      .subscribe((data: UnitIndex[]) => this.dataSource.data = data);
   }
 
   ngAfterViewInit() {

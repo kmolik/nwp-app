@@ -1,7 +1,7 @@
 <h2>Lista jednostek</h2>
 
 <div class="mat-elevation-z8">
-  <mat-table mat-table [dataSource]="dataSource" >
+  <table mat-table cellspacing='2' cellpadding='40' [dataSource]="dataSource" >
 
     <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef> Lp. </th>
@@ -21,15 +21,15 @@
     <ng-container matColumnDef="action">
       <th mat-header-cell *matHeaderCellDef> Action </th>
       <td mat-cell *matCellDef="let element">
-        <button mat-raised-button> Wybierz </button>
+        <button mat-raised-button routerLink="/buildings/buildingsTable" routerLinkActive="active"> Wybierz </button>
       </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </mat-table>
+  </table>
   <mat-paginator [pageSizeOptions]="[5,10,25]" showFirstLastButtons></mat-paginator>
 </div>
-
+<router-outlet></router-outlet>
 
 

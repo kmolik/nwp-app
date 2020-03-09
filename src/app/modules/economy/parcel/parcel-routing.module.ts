@@ -4,7 +4,7 @@ import { ParcelTableComponent } from './parcel-table/parcel-table.component';
 
 
 const routes: Routes = [
-  {path: 'parcel', component: ParcelTableComponent}
+  {path: 'parcelTable', component: ParcelTableComponent}
 ];
 
 @NgModule({
