@@ -28,4 +28,13 @@ export class BuildingsTableComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
   }
+
+  removeAt(index: number) {
+    const data = this.dataSource.data;
+    data.splice((this.paginator.pageIndex * this.paginator.pageSize) + index, 1);
+
+    this.dataSource.data = data;
+  }
 }
+
+

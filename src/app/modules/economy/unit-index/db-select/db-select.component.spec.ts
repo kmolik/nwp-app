@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BuildingsFormModalComponent } from './buildings-form-modal.component';
+import { DbSelectComponent } from './db-select.component';
 
-describe('BuildingsFormModalComponent', () => {
-  let component: BuildingsFormModalComponent;
-  let fixture: ComponentFixture<BuildingsFormModalComponent>;
+describe('DbSelectComponent', () => {
+  let component: DbSelectComponent;
+  let fixture: ComponentFixture<DbSelectComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BuildingsFormModalComponent ]
+      declarations: [ DbSelectComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BuildingsFormModalComponent);
+    fixture = TestBed.createComponent(DbSelectComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
