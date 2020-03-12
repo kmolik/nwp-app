@@ -20,6 +20,7 @@ import { FormsModule } from '@angular/forms';
     FormsModule
   ],
   entryComponents: [
+    BuildingsFormComponent
   ]
 })
 export class BuildingsModule { }

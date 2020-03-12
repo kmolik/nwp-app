@@ -9,9 +9,6 @@ import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
-
-
-
 const material = [
   MatTableModule,
   MatButtonModule,
@@ -23,8 +20,6 @@ const material = [
   MatMenuModule,
   MatToolbarModule
 ];
-
-
 
 @NgModule({
   imports: [material],

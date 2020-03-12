@@ -3,6 +3,8 @@ import { BuildingsService } from 'src/app/core/http/buildings.service';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Buildings } from 'src/app/core/models/buildings';
+import { MatDialog } from '@angular/material';
+import { BuildingsFormComponent } from '../buildings-form/buildings-form.component';
 
 @Component({
   selector: 'app-buildings-table',
@@ -17,7 +19,9 @@ export class BuildingsTableComponent implements OnInit, AfterViewInit {
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
 
-  constructor(private buildingsService: BuildingsService) { }
+  constructor(
+    private buildingsService: BuildingsService,
+    public dialog: MatDialog) { }
 
   ngOnInit() {
 
@@ -34,6 +38,12 @@ export class BuildingsTableComponent implements OnInit, AfterViewInit {
     data.splice((this.paginator.pageIndex * this.paginator.pageSize) + index, 1);
 
     this.dataSource.data = data;
+  }
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(BuildingsFormComponent, {
+      width: '640px', disableClose: true
+    });
   }
 }
 
