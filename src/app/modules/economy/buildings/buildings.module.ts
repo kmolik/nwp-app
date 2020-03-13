@@ -4,7 +4,8 @@ import { BuildingsTableComponent } from './buildings-table/buildings-table.compo
 import { BuildingsRoutingModule } from './buildings-routing.module';
 import { MaterialModule } from 'src/app/core/material/material.module';
 import { BuildingsFormComponent } from './buildings-form/buildings-form.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -17,7 +18,9 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     BuildingsRoutingModule,
     MaterialModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   entryComponents: [
     BuildingsFormComponent

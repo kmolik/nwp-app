@@ -1,11 +1,29 @@
-<div class="example-container">
-  <mat-form-field appearance="fill">
-    <mat-label>Id budynku</mat-label>
-    <input matInput>
+<form [formGroup]="buildingForm">
+  <mat-form-field>
+    <input matInput placeholder="Id budynku" formControlName="buildingID">
   </mat-form-field>
-  <br>
-  <mat-form-field appearance="fill">
-    <mat-label>Textarea</mat-label>
-    <textarea matInput></textarea>
+
+  <mat-form-field>
+    <input matInput placeholder="Typ budynku" formControlName="buildingType">
   </mat-form-field>
-</div>
+
+  <mat-form-field>
+    <input matInput placeholder="Rok budowy" formControlName="buildYear">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Numer działki" formControlName="parcelNumber">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Województwo" formControlName="province">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Powiat" formControlName="countie">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Gmina" formControlName="comune">
+  </mat-form-field>
+</form>

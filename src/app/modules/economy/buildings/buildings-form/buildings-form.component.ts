@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-buildings-form',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BuildingsFormComponent implements OnInit {
 
-  constructor() { }
+  buildingForm: FormGroup;
+
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
-  }
+    this.buildingForm = this.fb.group({
+      buildingID: '',
+      buildingType: '',
+      buildYear: '',
+      parcelNumber: '',
+      province: '',
+      countie: '',
+      commune: ''
+    });
 
+    this.buildingForm.valueChanges.subscribe(console.log);
+  }
 }
