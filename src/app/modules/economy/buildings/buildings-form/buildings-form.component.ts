@@ -22,7 +22,11 @@ export class BuildingsFormComponent implements OnInit {
       countie: '',
       commune: ''
     });
+  }
 
-    this.buildingForm.valueChanges.subscribe(console.log);
+  onSubmit() {
+    console.log(this.buildingForm.value);
+
+    //this.buildingForm.valueChanges.subscribe(console.log);
   }
 }

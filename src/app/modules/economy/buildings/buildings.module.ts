@@ -5,7 +5,7 @@ import { BuildingsRoutingModule } from './buildings-routing.module';
 import { MaterialModule } from 'src/app/core/material/material.module';
 import { BuildingsFormComponent } from './buildings-form/buildings-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 
 
@@ -19,8 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BuildingsRoutingModule,
     MaterialModule,
     FormsModule,
-    ReactiveFormsModule,
-    BrowserAnimationsModule
+    ReactiveFormsModule
   ],
   entryComponents: [
     BuildingsFormComponent
