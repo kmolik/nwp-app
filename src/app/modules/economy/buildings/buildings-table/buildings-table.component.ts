@@ -45,6 +45,10 @@ export class BuildingsTableComponent implements OnInit, AfterViewInit {
       width: '640px', disableClose: true
     });
   }
+
+  closeDialog() {
+    this.dialog.closeAll();
+  }
 }
 
 

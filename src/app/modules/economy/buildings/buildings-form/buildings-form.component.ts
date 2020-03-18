@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
+import { MatDialog } from '@angular/material';
+
 
 @Component({
   selector: 'app-buildings-form',
@@ -10,7 +12,10 @@ export class BuildingsFormComponent implements OnInit {
 
   buildingForm: FormGroup;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(
+    private fb: FormBuilder,
+    public dialog: MatDialog
+    ) { }
 
   ngOnInit() {
     this.buildingForm = this.fb.group({
@@ -26,7 +31,9 @@ export class BuildingsFormComponent implements OnInit {
 
   onSubmit() {
     console.log(this.buildingForm.value);
+  }
 
-    //this.buildingForm.valueChanges.subscribe(console.log);
+  closeDialog() {
+    this.dialog.closeAll();
   }
 }
