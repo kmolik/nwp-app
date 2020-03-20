@@ -8,12 +8,14 @@ import { UnitIndexService } from './http/unit_index.service';
 import { MaterialModule } from './material/material.module';
 import { ParcelService } from './http/parcel.service';
 import { BuildingsService } from './http/buildings.service';
+import { SideMenuComponent } from './side-menu/side-menu.component';
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    SideMenuComponent
   ],
   imports: [
     CommonModule,
@@ -23,6 +25,7 @@ import { BuildingsService } from './http/buildings.service';
   exports: [
     HeaderComponent,
     FooterComponent,
+    SideMenuComponent,
     MaterialModule
   ],
   providers: [

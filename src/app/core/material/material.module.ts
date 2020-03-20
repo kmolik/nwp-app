@@ -11,6 +11,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatChipsModule } from '@angular/material/chips';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatTreeModule } from '@angular/material/tree';
+import { MatIconModule } from '@angular/material/icon';
 
 const material = [
   MatTableModule,
@@ -24,7 +27,10 @@ const material = [
   MatToolbarModule,
   MatSelectModule,
   MatCheckboxModule,
-  MatChipsModule
+  MatChipsModule,
+  MatSidenavModule,
+  MatTreeModule,
+  MatIconModule
 ];
 
 @NgModule({
