@@ -1,44 +1,24 @@
 import { FlatTreeControl } from '@angular/cdk/tree';
 import { Component, OnInit } from '@angular/core';
 import { MatTreeFlatDataSource, MatTreeFlattener } from '@angular/material/tree';
+import { tableTree } from '../models/tableTree';
+import { Router } from '@angular/router';
 
-interface FoodNode {
+
+
+interface TableNode {
   name: string;
-  children?: FoodNode[];
+  children?: TableNode[];
+  path?: string;
 }
 
-const TREE_DATA: FoodNode[] = [
-  {
-    name: 'Miasta',
-    children: [
-      {name: 'Szczecin'},
-      {name: 'Świnoujście'},
-      {name: 'Koszalin'},
-    ]
-  }, {
-    name: 'Powiaty',
-    children: [
-      {
-        name: 'Green',
-        children: [
-          {name: 'Broccoli'},
-          {name: 'Brussels sprouts'},
-        ]
-      }, {
-        name: 'Orange',
-        children: [
-          {name: 'Pumpkins'},
-          {name: 'Carrots'},
-        ]
-      },
-    ]
-  },
-];
+const NEW_TREE: TableNode[] = tableTree;
 
 interface ExampleFlatNode {
   expandable: boolean;
   name: string;
   level: number;
+  path: string;
 }
 
 @Component({
@@ -49,12 +29,14 @@ interface ExampleFlatNode {
 export class SideMenuComponent implements OnInit {
 
   // tslint:disable-next-line: variable-name
-  private _transformer = (node: FoodNode, level: number) => {
+  private _transformer = (node: TableNode, level: number) => {
     return {
       expandable: !!node.children && node.children.length > 0,
       name: node.name,
       // tslint:disable-next-line: object-literal-shorthand
       level: level,
+      // tslint:disable-next-line: object-literal-shorthand
+      path: node.path
     };
   }
 
@@ -69,8 +51,8 @@ export class SideMenuComponent implements OnInit {
   // tslint:disable-next-line: member-ordering
   dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
 
-  constructor() {
-    this.dataSource.data = TREE_DATA;
+  constructor(private router: Router) {
+    this.dataSource.data = NEW_TREE;
   }
 
   hasChild = (_: number, node: ExampleFlatNode) => node.expandable;
@@ -78,4 +60,7 @@ export class SideMenuComponent implements OnInit {
   ngOnInit() {
   }
 
+  goTo(path) {
+    this.router.navigate([path]);
+  }
 }

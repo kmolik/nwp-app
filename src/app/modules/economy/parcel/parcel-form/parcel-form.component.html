@@ -1,0 +1,28 @@
+<form [formGroup]="parcelForm">
+  <mat-form-field>
+    <input matInput placeholder="Numer działki" formControlName= "parcelID">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Województwo" formControlName= "province">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Powiat" formControlName= "countie">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Gmina" formControlName= "commune">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Powierzchnia" formControlName= "surface">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Udział" formControlName= "share">
+  </mat-form-field>
+
+  <button mat-raised-button (click)="onSubmit()"> Wyślij </button>
+  <button mat-raised-button (click)="closeDialog()"> Anuluj </button>
+</form>
