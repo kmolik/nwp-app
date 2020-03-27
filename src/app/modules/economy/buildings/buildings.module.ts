@@ -5,6 +5,7 @@ import { BuildingsRoutingModule } from './buildings-routing.module';
 import { MaterialModule } from 'src/app/core/material/material.module';
 import { BuildingsFormComponent } from './buildings-form/buildings-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BuildingsEditComponent } from './buildings-edit/buildings-edit.component';
 
 
 
@@ -12,7 +13,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     BuildingsTableComponent,
-    BuildingsFormComponent
+    BuildingsFormComponent,
+    BuildingsEditComponent
   ],
   imports: [
     CommonModule,

@@ -5,6 +5,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Buildings } from 'src/app/core/models/buildings';
 import { MatDialog } from '@angular/material';
 import { BuildingsFormComponent } from '../buildings-form/buildings-form.component';
+import { BuildingsEditComponent } from '../buildings-edit/buildings-edit.component';
 
 @Component({
   selector: 'app-buildings-table',
@@ -14,7 +15,7 @@ import { BuildingsFormComponent } from '../buildings-form/buildings-form.compone
 export class BuildingsTableComponent implements OnInit, AfterViewInit {
 
   // tslint:disable-next-line: max-line-length
-  displayedColumns: string[] = ['id', 'buildingID', 'buildingType', 'buildYear', 'parcelNumber', 'province', 'countie', 'commune', 'action'];
+  displayedColumns: string[] = ['id', 'buildingID', 'buildingType', 'buildYear', 'parcelNumber', 'province', 'countie', 'commune', 'delete', 'edit'];
   dataSource = new MatTableDataSource<Buildings>();
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
@@ -40,14 +41,25 @@ export class BuildingsTableComponent implements OnInit, AfterViewInit {
     this.dataSource.data = data;
   }
 
-  openDialog(): void {
+  openForm(): void {
     const dialogRef = this.dialog.open(BuildingsFormComponent, {
+      width: '640px', disableClose: true
+    });
+  }
+
+  openEdit(): void {
+    const dialogRef = this.dialog.open(BuildingsEditComponent, {
       width: '640px', disableClose: true
     });
   }
 
   closeDialog() {
     this.dialog.closeAll();
+  }
+
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 }
 

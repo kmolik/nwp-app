@@ -1,6 +1,6 @@
-<h2>Dodawanie nowego rekordu</h2>
+<h2>Edycja rekordu</h2>
 
-<form [formGroup]="buildingForm">
+<form [formGroup]="buildingEdit">
   <mat-form-field>
     <input matInput placeholder="Id budynku" formControlName="buildingID">
   </mat-form-field>
@@ -32,3 +32,4 @@
   <button mat-raised-button (click)="onSubmit()"> Wyślij </button>
   <button mat-raised-button (click)="closeDialog()"> Anuluj </button>
 </form>
+

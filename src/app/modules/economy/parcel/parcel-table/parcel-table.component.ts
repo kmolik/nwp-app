@@ -5,6 +5,7 @@ import { Parcel } from 'src/app/core/models/parcel';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatDialog } from '@angular/material';
 import { ParcelFormComponent } from '../parcel-form/parcel-form.component';
+import { ParcelEditComponent } from '../parcel-edit/parcel-edit.component';
 
 @Component({
   selector: 'app-parcel-table',
@@ -13,7 +14,7 @@ import { ParcelFormComponent } from '../parcel-form/parcel-form.component';
 })
 export class ParcelTableComponent implements OnInit, AfterViewInit {
 
-  displayedColumns: string[] = ['id', 'parcelId', 'province', 'countie', 'commune', 'surface', 'share', 'action'];
+  displayedColumns: string[] = ['id', 'parcelId', 'province', 'countie', 'commune', 'surface', 'share', 'delete', 'edit'];
   dataSource = new MatTableDataSource<Parcel>();
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
@@ -40,8 +41,14 @@ export class ParcelTableComponent implements OnInit, AfterViewInit {
     this.dataSource.data = data;
   }
 
-  openDialog(): void {
+  openForm(): void {
     const dialogRef = this.dialog.open(ParcelFormComponent, {
+      width: '640px', disableClose: true
+    });
+  }
+
+  openEdit(): void {
+    const dialogRef = this.dialog.open(ParcelEditComponent, {
       width: '640px', disableClose: true
     });
   }
@@ -49,4 +56,10 @@ export class ParcelTableComponent implements OnInit, AfterViewInit {
   closeDialog() {
     this.dialog.closeAll();
   }
+
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
 }
+

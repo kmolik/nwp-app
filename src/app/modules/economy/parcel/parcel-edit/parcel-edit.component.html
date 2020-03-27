@@ -1,6 +1,6 @@
-<h2>Dodawanie nowego rekordu</h2>
+<h2>Edycja rekordu</h2>
 
-<form [formGroup]="parcelForm">
+<form [formGroup]="parcelEdit">
   <mat-form-field>
     <input matInput placeholder="Numer działki" formControlName= "parcelID">
   </mat-form-field>
@@ -25,9 +25,6 @@
     <input matInput placeholder="Udział" formControlName= "share">
   </mat-form-field>
 
-  <mat-card>
-    <button mat-raised-button (click)="onSubmit()"> Wyślij </button>
-    <button mat-raised-button (click)="closeDialog()"> Anuluj </button>
-  </mat-card>
-
+  <button mat-raised-button (click)="onSubmit()"> Wyślij </button>
+  <button mat-raised-button (click)="closeDialog()"> Anuluj </button>
 </form>
