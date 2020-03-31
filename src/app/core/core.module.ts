@@ -9,13 +9,16 @@ import { MaterialModule } from './material/material.module';
 import { ParcelService } from './http/parcel.service';
 import { BuildingsService } from './http/buildings.service';
 import { SideMenuComponent } from './side-menu/side-menu.component';
+import { LoginComponent } from './auth/login/login.component';
+
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
     FooterComponent,
-    SideMenuComponent
+    SideMenuComponent,
+    LoginComponent
   ],
   imports: [
     CommonModule,
