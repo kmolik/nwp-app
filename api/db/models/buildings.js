@@ -1,7 +1,7 @@
 const Sequalize = require('sequelize')
-var db = require('../connection/connect')
+var sequelize = require('../connection/connect')
 
-const budynki = db.define('budynki_i_budowle', {
+const budynki = sequelize.define('budynki_i_budowle', {
   id: {
     field:'id',
     type: Sequalize.INTEGER,

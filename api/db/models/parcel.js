@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize')
-var db = require('../connection/connect')
+var sequelize = require('../connection/connect')
 
-const dzialki = db.define('dzialki', {
+const dzialki = sequelize.define('dzialki', {
   id:{
     field:'id',
     type: Sequelize.INTEGER,

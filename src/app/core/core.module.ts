@@ -10,6 +10,7 @@ import { ParcelService } from './http/parcel.service';
 import { BuildingsService } from './http/buildings.service';
 import { SideMenuComponent } from './side-menu/side-menu.component';
 import { LoginComponent } from './auth/login/login.component';
+import { AdminComponent } from './auth/admin/admin.component';
 
 
 
@@ -18,7 +19,8 @@ import { LoginComponent } from './auth/login/login.component';
     HeaderComponent,
     FooterComponent,
     SideMenuComponent,
-    LoginComponent
+    LoginComponent,
+    AdminComponent
   ],
   imports: [
     CommonModule,
