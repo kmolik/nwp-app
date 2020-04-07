@@ -1,10 +1,16 @@
 const jwt = require("jsonwebtoken")
 const config = require("../config/auth.config")
 const db = require("../db/models/users")
-const User = db.User
+const User = db.user
 
 verifyToken = (req, res, next) => {
-  let token = req.headers["x-access-token"]
+  let token = req.headers['x-access-token'] || req.headers['authorization']; // Express headers are auto converted to lowercase
+  if (token.startsWith('Bearer ')) {
+    // Remove Bearer from string
+    token = token.slice(7, token.length);
+  }
+
+
 
   if(!token) {
     return res.status(403).send({

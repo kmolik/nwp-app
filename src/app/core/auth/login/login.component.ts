@@ -16,6 +16,20 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  test() {
+    localStorage.setItem("token", "test")
+    sessionStorage.setItem("token", 'test')
+  }
+
+  test2() {
+    localStorage.removeItem("token")
+  }
+
+  test3() {
+    console.log(localStorage.getItem("token"));
+  }
+
+
   public logIn() {
 
     this.router.navigate(['/buildings/buildingsTable']);

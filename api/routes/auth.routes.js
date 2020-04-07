@@ -6,7 +6,7 @@ module.exports = function(app) {
     req.body
     res.header(
       "Access-Control-Allow-Headers",
-      "x-accesss-token, Origin, Content-Type, Accept"
+      "authorization, Origin, Content-Type, Accept"
     )
     next()
     app.post(

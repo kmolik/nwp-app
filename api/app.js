@@ -24,7 +24,26 @@ const spis_jednostek = require('./db/models/unit_index')
 const dzialki = require('./db/models/parcel')
 const budynki = require('./db/models/buildings')
 
-db.sequelize.sync();
+db.sequelize.sync().then(() => {
+  //initial();
+});
+
+function initial() {
+  Role.create({
+    id: 1,
+    name: "user"
+  });
+
+  Role.create({
+    id: 2,
+    name: "moderator"
+  });
+
+  Role.create({
+    id: 3,
+    name: "admin"
+  });
+}
 
 
 app.get('/jednostki', (req,res) => {
