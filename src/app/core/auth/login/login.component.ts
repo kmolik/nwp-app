@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { StorageService } from '../../services/index';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -7,26 +9,31 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.sass']
 })
 export class LoginComponent implements OnInit {
+  loginForm: FormGroup;
   public flag: boolean;
 
-  constructor(private router: Router) {
+  constructor(
+    private router: Router,
+    private storageService: StorageService,
+    private fb: FormBuilder
+    ) {
     this.flag = false;
    }
 
   ngOnInit(): void {
+    this.loginForm = this.fb.group({
+      username: ['', Validators.required],
+      password: ['', Validators.required]
+    });
   }
 
   test() {
-    localStorage.setItem("token", "test")
-    sessionStorage.setItem("token", 'test')
+    this.storageService.setLocalStorageItem('token', 'ddfkjldns');
   }
 
   test2() {
-    localStorage.removeItem("token")
-  }
-
-  test3() {
-    console.log(localStorage.getItem("token"));
+    const value = 'token';
+    console.log(this.storageService.getLocalStorageItem(value));
   }
 
 

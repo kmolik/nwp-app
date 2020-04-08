@@ -11,6 +11,7 @@ import { BuildingsService } from './http/buildings.service';
 import { SideMenuComponent } from './side-menu/side-menu.component';
 import { LoginComponent } from './auth/login/login.component';
 import { AdminComponent } from './auth/admin/admin.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 
@@ -25,7 +26,9 @@ import { AdminComponent } from './auth/admin/admin.component';
   imports: [
     CommonModule,
     CoreRoutingModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   exports: [
     HeaderComponent,
