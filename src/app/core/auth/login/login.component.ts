@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { StorageService } from '../../services/index';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { AuthService } from '../../http/';
+import { Token } from '../../models/auth';
 
 @Component({
   selector: 'app-login',
@@ -14,8 +16,9 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private storageService: StorageService,
-    private fb: FormBuilder
+    private authService: AuthService,
+    private fb: FormBuilder,
+    private storageService: StorageService
     ) {
     this.flag = false;
    }
@@ -27,18 +30,14 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  test() {
-    this.storageService.setLocalStorageItem('token', 'ddfkjldns');
+  onSubmit() {
+    this.authService.login(this.loginForm.value).subscribe((res: Token) => {
+      this.storageService.setLocalStorageItem('token', (res.type + ' ' + res.accessToken));
+      console.log(res);
+    });
   }
-
-  test2() {
-    const value = 'token';
-    console.log(this.storageService.getLocalStorageItem(value));
-  }
-
 
   public logIn() {
-
     this.router.navigate(['/buildings/buildingsTable']);
     this.flag = true;
   }
