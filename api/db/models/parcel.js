@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize')
 var sequelize = require('../connection/connect')
 
-const dzialki = sequelize.define('dzialki', {
+const parcel = sequelize.define('dzialki', {
   id:{
     field:'id',
     type: Sequelize.INTEGER,
@@ -137,4 +137,4 @@ const dzialki = sequelize.define('dzialki', {
   timestamps: false
 })
 
-module.exports = dzialki
+module.exports = parcel

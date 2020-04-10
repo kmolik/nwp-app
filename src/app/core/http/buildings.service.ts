@@ -8,7 +8,7 @@ import { Buildings } from '../models/buildings';
 })
 export class BuildingsService {
 
-  private url = 'http://localhost:3000/budynki';
+  private url = 'http://localhost:3000/budildings';
 
   constructor(private http: HttpClient) {}
 

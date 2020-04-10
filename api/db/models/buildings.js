@@ -1,7 +1,7 @@
 const Sequalize = require('sequelize')
 var sequelize = require('../connection/connect')
 
-const budynki = sequelize.define('budynki_i_budowle', {
+const buildings = sequelize.define('budynki_i_budowle', {
   id: {
     field:'id',
     type: Sequalize.INTEGER,
@@ -153,4 +153,4 @@ const budynki = sequelize.define('budynki_i_budowle', {
   timestamps: false
 })
 
-module.exports = budynki
+module.exports = buildings

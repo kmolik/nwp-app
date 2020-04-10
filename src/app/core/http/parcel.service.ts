@@ -8,7 +8,7 @@ import { Parcel } from '../models/parcel';
 })
 export class ParcelService {
 
-  private url = 'http://localhost:3000/dzialki';
+  private url = 'http://localhost:3000/parcels';
 
   constructor(private http: HttpClient) {}
 

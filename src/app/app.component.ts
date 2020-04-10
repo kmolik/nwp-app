@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { BuildingsService, ParcelService, UnitIndexService } from './core/http/index';
+import { BuildingsService, ParcelService } from './core/http/index';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +15,6 @@ export class AppComponent implements OnInit {
     private router: Router,
     private buildings: BuildingsService,
     private parcel: ParcelService,
-    private unitIndex: UnitIndexService
     ) {
     this.flag = false;
   }
