@@ -1,9 +1,5 @@
-const parcel = require('../db/models/parcel')
+const controller = require('../controllers/parcel.controller')
 
 module.exports = function(app) {
-  app.get('/parcels', (req, res) => {
-    parcel.findAll().then((parcel) =>{
-      res.json(parcel)
-    })
-  })
+  app.get('/parcels', controller.getParcels)
 }

@@ -1,10 +1,8 @@
 const buildings = require('../db/models/buildings')
+const controller = require('../controllers/buildings.controller')
+
 
 module.exports = function(app) {
-  app.get('/buildings',//to musi być w kontrolerze
-  (req, res) => {
-    buildings.findAll().then((buildings) => {
-      res.json(buildings)
-    })
-  })
-}
+  app.get('/buildings', controller.getBuildings)
+  }
+
