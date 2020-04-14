@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { BuildingsService, ParcelService } from './core/http/index';
+import { AuthService } from './core/auth/services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -13,13 +13,16 @@ export class AppComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private buildings: BuildingsService,
-    private parcel: ParcelService,
+    private authService: AuthService
     ) {
-    this.flag = false;
   }
 
   ngOnInit() {
     this.router.navigate(['/login']);
+    this.authService.auth$.subscribe(auth => {
+      this.flag = auth;
+      console.log(auth);
+
+    });
   }
 }
