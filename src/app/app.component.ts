@@ -18,11 +18,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.router.navigate(['/login']);
-    this.authService.auth$.subscribe(auth => {
-      this.flag = auth;
-      console.log(auth);
 
-    });
   }
+
 }

@@ -4,21 +4,19 @@ import { LoginComponent } from './core/auth/login/login.component';
 
 
 const routes: Routes = [
+
   {
-    path: 'login',
-    component: LoginComponent
-  },
-  {
-    path: 'parcel',
-    loadChildren: () => import('./modules/economy/parcel/parcel.module').then(m => m.ParcelModule)
-  },
-  {
-    path: 'buildings',
-    loadChildren: () => import('./modules/economy/buildings/buildings.module').then(m => m.BuildingsModule)
-  },
-  {
-    path: 'status',
-    loadChildren: () => import('./modules/economy/legal-status/legal-status.module').then(m => m.LegalStatusModule)
+    path: '',
+    children: [
+      {
+        path: 'login',
+        component: LoginComponent
+      },
+      {
+        path: 'economy',
+        loadChildren: () => import('./modules/economy/economy.module').then(m => m.EconomyModule)
+      }
+    ]
   }
 ];
 
