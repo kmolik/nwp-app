@@ -7,7 +7,7 @@ const routes: Routes = [
   {
     path: '',
     component: EconomyDashboardComponent,
-    /*
+
     children: [
 
       {
@@ -22,7 +22,7 @@ const routes: Routes = [
         path: 'status',
         loadChildren: () => import('../features/legal-status/legal-status.module').then(m => m.LegalStatusModule)
       }
-    ] */
+    ]
   }
 ];
 
