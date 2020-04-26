@@ -32,13 +32,9 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     this.authService.login(this.loginForm.value).subscribe((res: Token) => {
-      this.storageService.setLocalStorageItem('token', (res.type + ' ' + res.accessToken));
-      console.log(res);
+      this.storageService.setLocalStorageItem('token', (res.accessToken));
+      this.authService.authenticatedUser();
+      this.router.navigate(['/economy/buildings/buildingsTable']);
     });
-  }
-
-  public logIn() {
-    this.router.navigate(['/buildings/buildingsTable']);
-    this.flag = true;
   }
 }

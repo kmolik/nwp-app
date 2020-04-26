@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from './core/auth/services/auth.service';
+import { AuthService } from './core/http';
 
 @Component({
   selector: 'app-root',
@@ -18,11 +18,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.router.navigate(['/login']);
-    this.authService.auth$.subscribe(auth => {
-      this.flag = auth;
-      console.log(auth);
 
-    });
   }
+
 }
