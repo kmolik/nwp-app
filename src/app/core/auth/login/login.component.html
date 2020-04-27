@@ -4,19 +4,26 @@
   <h3>Mienie Skarbu Państwa</h3>
 
   <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-    <div class="form-group">
-      <label for="username">Login</label>
-      <input type="text" formControlName="username">
+
+    <div>
+      <mat-form-field class="logInput__field">
+        <label for="username" class="logInput__label">Login: </label>
+        <input matInput type="text" class="logInput" formControlName="username">
+      </mat-form-field>
     </div>
-    <div class="form-group">
-      <label for="password">Hasło</label>
-      <input type="password" formControlName="password">
+
+    <div>
+      <mat-form-field class="logInput__field">
+        <label for="password" class="logInput__label">Hasło: </label>
+        <input matInput type="password" class="logInput" formControlName="password">
+      </mat-form-field>
     </div>
-    <div class="form-group">
-      <button class="form-group">
+
+    <div>
+      <button mat-raised-button class="mat-raised-button__login">
         Zaloguj
       </button>
     </div>
-  </form>
 
+  </form>
 </div>
