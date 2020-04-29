@@ -21,9 +21,9 @@ export const tableTree = [
       {
         name: 'Koszalin',
         children: [
-          {name: 'Działki ewidencyjne', path: '/parcel/parcelTable'},
-          {name: 'Budynki i budowle', path: '/buildings/buildingsTable'},
-          {name: 'Stan prawny lokali mieszkalnych i użytkowych', path: '/status/legalStatusTable'}
+          {name: 'Działki ewidencyjne', path: 'economy/parcel/parcelTable'},
+          {name: 'Budynki i budowle', path: 'economy/buildings/buildingsTable'},
+          {name: 'Stan prawny lokali mieszkalnych i użytkowych', path: 'economy/status/legalStatusTable'}
         ]
       },
     ]
