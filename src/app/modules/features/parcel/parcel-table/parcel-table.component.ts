@@ -10,7 +10,7 @@ import { ParcelEditComponent } from '../parcel-edit/parcel-edit.component';
 @Component({
   selector: 'app-parcel-table',
   templateUrl: './parcel-table.component.html',
-  styleUrls: ['./parcel-table.component.sass']
+  styleUrls: ['./parcel-table.component.scss']
 })
 export class ParcelTableComponent implements OnInit, AfterViewInit {
 
