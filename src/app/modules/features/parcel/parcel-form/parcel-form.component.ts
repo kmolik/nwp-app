@@ -5,7 +5,7 @@ import { MatDialog } from '@angular/material';
 @Component({
   selector: 'app-parcel-form',
   templateUrl: './parcel-form.component.html',
-  styleUrls: ['./parcel-form.component.sass']
+  styleUrls: ['./parcel-form.component.scss']
 })
 export class ParcelFormComponent implements OnInit {
 

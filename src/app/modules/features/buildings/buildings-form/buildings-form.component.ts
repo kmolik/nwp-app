@@ -6,7 +6,7 @@ import { MatDialog } from '@angular/material';
 @Component({
   selector: 'app-buildings-form',
   templateUrl: './buildings-form.component.html',
-  styleUrls: ['./buildings-form.component.sass']
+  styleUrls: ['./buildings-form.component.scss']
 })
 export class BuildingsFormComponent implements OnInit {
 

@@ -10,7 +10,7 @@ import { BuildingsEditComponent } from '../buildings-edit/buildings-edit.compone
 @Component({
   selector: 'app-buildings-table',
   templateUrl: './buildings-table.component.html',
-  styleUrls: ['./buildings-table.component.sass']
+  styleUrls: ['./buildings-table.component.scss']
 })
 export class BuildingsTableComponent implements OnInit, AfterViewInit {
 
