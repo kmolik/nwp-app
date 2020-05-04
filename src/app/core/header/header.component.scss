@@ -1,16 +1,19 @@
-mat-toolbar{
-  background-color: #707070;
-  border-top: 0;
-  height: 150px;
+
+.logo {
+  justify-content: center;
+  position: static;
+  margin-left: 25px;
+  margin-top: 20px;
+  margin-right: 25px;
+  margin-bottom: 20px;
+  width: 150px;
 }
 
-.logo-container{
-  margin-top: 100px;
-  width: 143px;
-  margin-left: 50px;
-  margin-right: 120px;
+.tittle {
+  margin-top: 20px;
 }
 
-.logo{
-  width: 115px
+.logoutBtn {
+  justify-content: right;
+  margin-top: 20px;
 }
