@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './core/auth/login/login.component';
 import { AuthGuard } from './core/guards/auth.guard';
+import { UnAuthGuard } from './core/guards/un-auth.guard';
 
 
 const routes: Routes = [
@@ -10,7 +11,13 @@ const routes: Routes = [
     path: '',
     children: [
       {
+      path: '',
+      redirectTo: '/login',
+      pathMatch: 'full',
+      },
+      {
         path: 'login',
+        
         component: LoginComponent
       },
       {

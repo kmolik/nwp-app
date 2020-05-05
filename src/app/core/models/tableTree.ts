@@ -7,7 +7,7 @@ export const tableTree = [
         children: [
           {name: 'Działki ewidencyjne'},
           {name: 'Budynki i budowle'},
-          {name: 'Stan prawny lokali mieszkalnych i użytkowych'}
+          {name: 'Stan prawny lokali'}
         ]
       },
       {
@@ -15,7 +15,7 @@ export const tableTree = [
         children: [
           {name: 'Działki ewidencyjne'},
           {name: 'Budynki i budowle'},
-          {name: 'Stan prawny lokali mieszkalnych i użytkowych'}
+          {name: 'Stan prawny lokali'}
         ]
       },
       {
@@ -23,7 +23,7 @@ export const tableTree = [
         children: [
           {name: 'Działki ewidencyjne', path: 'economy/parcel/parcelTable'},
           {name: 'Budynki i budowle', path: 'economy/buildings/buildingsTable'},
-          {name: 'Stan prawny lokali mieszkalnych i użytkowych', path: 'economy/status/legalStatusTable'}
+          {name: 'Stan prawny lokali', path: 'economy/status/legalStatusTable'}
         ]
       },
     ]
@@ -36,7 +36,7 @@ export const tableTree = [
         children: [
           {name: 'Działki ewidencyjne'},
           {name: 'Budynki i budowle'},
-          {name: 'Stan prawny lokali mieszkalnych i użytkowych'}
+          {name: 'Stan prawny lokali'}
         ]
       },
       {
@@ -44,7 +44,7 @@ export const tableTree = [
         children: [
           {name: 'Działki ewidencyjne'},
           {name: 'Budynki i budowle'},
-          {name: 'Stan prawny lokali mieszkalnych i użytkowych'}
+          {name: 'Stan prawny lokali'}
         ]
       },
       {
@@ -52,7 +52,7 @@ export const tableTree = [
         children: [
           {name: 'Działki ewidencyjne'},
           {name: 'Budynki i budowle'},
-          {name: 'Stan prawny lokali mieszkalnych i użytkowych'}
+          {name: 'Stan prawny lokali'}
         ]
       },
       {
@@ -60,7 +60,7 @@ export const tableTree = [
         children: [
           {name: 'Działki ewidencyjne'},
           {name: 'Budynki i budowle'},
-          {name: 'Stan prawny lokali mieszkalnych i użytkowych'}
+          {name: 'Stan prawny lokali'}
         ]
       },
       {
@@ -68,7 +68,7 @@ export const tableTree = [
         children: [
           {name: 'Działki ewidencyjne'},
           {name: 'Budynki i budowle'},
-          {name: 'Stan prawny lokali mieszkalnych i użytkowych'}
+          {name: 'Stan prawny lokali'}
         ]
       },
       {
@@ -76,7 +76,7 @@ export const tableTree = [
         children: [
           {name: 'Działki ewidencyjne'},
           {name: 'Budynki i budowle'},
-          {name: 'Stan prawny lokali mieszkalnych i użytkowych'}
+          {name: 'Stan prawny lokali'}
         ]
       },
       {
@@ -84,7 +84,7 @@ export const tableTree = [
         children: [
           {name: 'Działki ewidencyjne'},
           {name: 'Budynki i budowle'},
-          {name: 'Stan prawny lokali mieszkalnych i użytkowych'}
+          {name: 'Stan prawny lokali'}
         ]
       },
       {
@@ -92,7 +92,7 @@ export const tableTree = [
         children: [
           {name: 'Działki ewidencyjne'},
           {name: 'Budynki i budowle'},
-          {name: 'Stan prawny lokali mieszkalnych i użytkowych'}
+          {name: 'Stan prawny lokali'}
         ]
       },
       {
@@ -100,7 +100,7 @@ export const tableTree = [
         children: [
           {name: 'Działki ewidencyjne'},
           {name: 'Budynki i budowle'},
-          {name: 'Stan prawny lokali mieszkalnych i użytkowych'}
+          {name: 'Stan prawny lokali'}
         ]
       },
       {
@@ -108,7 +108,7 @@ export const tableTree = [
         children: [
           {name: 'Działki ewidencyjne'},
           {name: 'Budynki i budowle'},
-          {name: 'Stan prawny lokali mieszkalnych i użytkowych'}
+          {name: 'Stan prawny lokali'}
         ]
       },
       {
@@ -116,7 +116,7 @@ export const tableTree = [
         children: [
           {name: 'Działki ewidencyjne'},
           {name: 'Budynki i budowle'},
-          {name: 'Stan prawny lokali mieszkalnych i użytkowych'}
+          {name: 'Stan prawny lokali'}
         ]
       },
       {
@@ -124,7 +124,7 @@ export const tableTree = [
         children: [
           {name: 'Działki ewidencyjne'},
           {name: 'Budynki i budowle'},
-          {name: 'Stan prawny lokali mieszkalnych i użytkowych'}
+          {name: 'Stan prawny lokali'}
         ]
       },
       {
@@ -132,7 +132,7 @@ export const tableTree = [
         children: [
           {name: 'Działki ewidencyjne'},
           {name: 'Budynki i budowle'},
-          {name: 'Stan prawny lokali mieszkalnych i użytkowych'}
+          {name: 'Stan prawny lokali'}
         ]
       },
       {
@@ -140,7 +140,7 @@ export const tableTree = [
         children: [
           {name: 'Działki ewidencyjne'},
           {name: 'Budynki i budowle'},
-          {name: 'Stan prawny lokali mieszkalnych i użytkowych'}
+          {name: 'Stan prawny lokali'}
         ]
       },
       {
@@ -148,7 +148,7 @@ export const tableTree = [
         children: [
           {name: 'Działki ewidencyjne'},
           {name: 'Budynki i budowle'},
-          {name: 'Stan prawny lokali mieszkalnych i użytkowych'}
+          {name: 'Stan prawny lokali'}
         ]
       },
       {
@@ -156,7 +156,7 @@ export const tableTree = [
         children: [
           {name: 'Działki ewidencyjne'},
           {name: 'Budynki i budowle'},
-          {name: 'Stan prawny lokali mieszkalnych i użytkowych'}
+          {name: 'Stan prawny lokali'}
         ]
       },
       {
@@ -164,7 +164,7 @@ export const tableTree = [
         children: [
           {name: 'Działki ewidencyjne'},
           {name: 'Budynki i budowle'},
-          {name: 'Stan prawny lokali mieszkalnych i użytkowych'}
+          {name: 'Stan prawny lokali'}
         ]
       },
       {
@@ -172,7 +172,7 @@ export const tableTree = [
         children: [
           {name: 'Działki ewidencyjne'},
           {name: 'Budynki i budowle'},
-          {name: 'Stan prawny lokali mieszkalnych i użytkowych'}
+          {name: 'Stan prawny lokali'}
         ]
       }
     ]

@@ -9,6 +9,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TokenInterceptor } from './core/interceptors/token.interceptor';
 import { AuthGuard } from './core/guards/auth.guard';
+import { UnAuthGuard } from './core/guards/un-auth.guard';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { AuthGuard } from './core/guards/auth.guard';
       useClass: TokenInterceptor,
       multi: true
     },
-    AuthGuard
+    AuthGuard,
+    UnAuthGuard
   ],
   bootstrap: [AppComponent]
 })
