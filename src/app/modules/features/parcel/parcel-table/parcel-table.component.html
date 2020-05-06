@@ -2,7 +2,8 @@
   <h2>Działki ewidencyjne</h2>
 
   <button mat-raised-button class="mat-raised-button__functional" (click)="openForm()"> Nowy rekord </button>
-
+  <button mat-raised-button class="mat-raised-button__functional" > Eksport do excell </button>
+  
   <mat-form-field>
     <mat-label>Szukaj</mat-label>
     <input matInput (keyup)="applyFilter($event)" placeholder="np. numer działki">

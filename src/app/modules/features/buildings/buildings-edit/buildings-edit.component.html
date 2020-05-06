@@ -1,33 +1,7 @@
-<h2>Edycja rekordu</h2>
+<div class="editContainer">
+  <h2>Edycja rekordu</h2>
 
 <form [formGroup]="buildingEdit">
-  <!-- <mat-form-field>
-    <input matInput placeholder="Id budynku" formControlName="buildingID">
-  </mat-form-field>
-
-  <mat-form-field>
-    <input matInput placeholder="Typ budynku" formControlName="buildingType">
-  </mat-form-field>
-
-  <mat-form-field>
-    <input matInput placeholder="Rok budowy" formControlName="buildYear">
-  </mat-form-field>
-
-  <mat-form-field>
-    <input matInput placeholder="Numer działki" formControlName="parcelNumber">
-  </mat-form-field>
-
-  <mat-form-field>
-    <input matInput placeholder="Województwo" formControlName="province">
-  </mat-form-field>
-
-  <mat-form-field>
-    <input matInput placeholder="Powiat" formControlName="countie">
-  </mat-form-field>
-
-  <mat-form-field>
-    <input matInput placeholder="Gmina" formControlName="commune">
-  </mat-form-field> -->
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
@@ -79,7 +53,7 @@
 
     <div class="row">
       <div class="col-md-6">
-        <button mat-raised-button (click)="onSubmit()"> Wyślij </button>
+        <button mat-raised-button (click)="onSubmit()"> Edytuj </button>
       </div>
       <div class="col-md-6">
         <button mat-raised-button (click)="closeDialog()"> Anuluj </button>
@@ -87,4 +61,6 @@
     </div>
   </div>
 </form>
+</div>
+
 

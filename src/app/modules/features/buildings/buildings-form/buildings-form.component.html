@@ -1,34 +1,66 @@
-<h2>Dodawanie nowego rekordu</h2>
+  <div class="editContainer">
+    <h2>Dodawanie nowego rekordu</h2>
 
-<form [formGroup]="buildingForm">
-  <mat-form-field>
-    <input matInput placeholder="Id budynku" formControlName="buildingID">
-  </mat-form-field>
+    <form [formGroup]="buildingForm">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <input type="text" placeholder="Id budynku" formControlName="buildingID">
+        </div>
+      </div>
 
-  <mat-form-field>
-    <input matInput placeholder="Typ budynku" formControlName="buildingType">
-  </mat-form-field>
+      <div class="row">
+        <div class="col-md-12">
+          <input type="text" placeholder="Typ budynku" formControlName="buildingType">
+        </div>
+      </div>
 
-  <mat-form-field>
-    <input matInput placeholder="Rok budowy" formControlName="buildYear">
-  </mat-form-field>
+      <div class="row">
+        <div class="col-md-12">
+          <input type="text" placeholder="Rok budowy" formControlName="buildYear">
+        </div>
+      </div>
 
-  <mat-form-field>
-    <input matInput placeholder="Numer działki" formControlName="parcelNumber">
-  </mat-form-field>
+      <div class="row">
+        <div class="col-md-12">
+          <input type="text" placeholder="Rok budowy" formControlName="buildYear">
+        </div>
+      </div>
 
-  <mat-form-field>
-    <input matInput placeholder="Województwo" formControlName="province">
-  </mat-form-field>
+      <div class="row">
+        <div class="col-md-12">
+          <input type="text" placeholder="Numer działki" formControlName="parcelNumber">
+        </div>
+      </div>
 
-  <mat-form-field>
-    <input matInput placeholder="Powiat" formControlName="countie">
-  </mat-form-field>
+      <div class="row">
+        <div class="col-md-12">
+          <input type="text" placeholder="Województwo" formControlName="province">
+        </div>
+      </div>
 
-  <mat-form-field>
-    <input matInput placeholder="Gmina" formControlName="commune">
-  </mat-form-field>
+      <div class="row">
+        <div class="col-md-12">
+          <input type="text" placeholder="Powiat" formControlName="countie">
+        </div>
+      </div>
 
-  <button mat-raised-button (click)="onSubmit()"> Wyślij </button>
-  <button mat-raised-button (click)="closeDialog()"> Anuluj </button>
-</form>
+      <div class="row">
+        <div class="col-md-12">
+          <input type="text" placeholder="Gmina" formControlName="commune">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <button mat-raised-button (click)="onSubmit()"> Dodaj </button>
+        </div>
+        <div class="col-md-6">
+          <button mat-raised-button (click)="closeDialog()"> Anuluj </button>
+        </div>
+      </div>
+    </div>
+  </form>
+  </div>
+
+

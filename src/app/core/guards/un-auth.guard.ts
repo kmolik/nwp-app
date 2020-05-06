@@ -17,10 +17,9 @@ constructor(
   ): Observable<boolean> | Promise<boolean> | boolean {
     let isAuth = true;
     if (!!this.authService.getToken()) {
+      isAuth = false;
       this.authService.authenticatedUser();
       this.router.navigate(['/economy/buildings/buildingsTable']);
-      } else {
-        isAuth = false;
       }
     return isAuth;
   }

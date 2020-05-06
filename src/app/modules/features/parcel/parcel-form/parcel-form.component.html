@@ -1,33 +1,54 @@
-<h2>Dodawanie nowego rekordu</h2>
+<div class="editContainer">
+  <h2>Dodawanie nowego rekordu</h2>
 
 <form [formGroup]="parcelForm">
-  <mat-form-field>
-    <input matInput placeholder="Numer działki" formControlName= "parcelID">
-  </mat-form-field>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <input type="text" placeholder="Numer działki" formControlName= "parcelID">
+      </div>
+    </div>
 
-  <mat-form-field>
-    <input matInput placeholder="Województwo" formControlName= "province">
-  </mat-form-field>
+    <div class="row">
+      <div class="col-md-12">
+        <input type="text" placeholder="Województwo" formControlName= "province">
+      </div>
+    </div>
 
-  <mat-form-field>
-    <input matInput placeholder="Powiat" formControlName= "countie">
-  </mat-form-field>
+    <div class="row">
+      <div class="col-md-12">
+        <input type="text" placeholder="Powiat" formControlName= "countie">
+      </div>
+    </div>
 
-  <mat-form-field>
-    <input matInput placeholder="Gmina" formControlName= "commune">
-  </mat-form-field>
+    <div class="row">
+      <div class="col-md-12">
+        <input type="text" placeholder="Gmina" formControlName= "commune">
+      </div>
+    </div>
 
-  <mat-form-field>
-    <input matInput placeholder="Powierzchnia" formControlName= "surface">
-  </mat-form-field>
+    <div class="row">
+      <div class="col-md-12">
+        <input type="text" placeholder="Powierzchnia" formControlName= "surface">
+      </div>
+    </div>
 
-  <mat-form-field>
-    <input matInput placeholder="Udział" formControlName= "share">
-  </mat-form-field>
+    <div class="row">
+      <div class="col-md-12">
+        <input type="text" placeholder="Udział" formControlName= "share">
+      </div>
+    </div>
+    </div>
 
-  <mat-card>
-    <button mat-raised-button (click)="onSubmit()"> Wyślij </button>
-    <button mat-raised-button (click)="closeDialog()"> Anuluj </button>
-  </mat-card>
-
+    <div class="row">
+      <div class="col-md-6">
+        <button mat-raised-button (click)="onSubmit()"> Edytuj </button>
+      </div>
+      <div class="col-md-6">
+        <button mat-raised-button (click)="closeDialog()"> Anuluj </button>
+      </div>
+    </div>
 </form>
+</div>
+
+
