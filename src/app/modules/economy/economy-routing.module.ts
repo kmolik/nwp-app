@@ -21,6 +21,10 @@ const routes: Routes = [
       {
         path: 'status',
         loadChildren: () => import('../features/legal-status/legal-status.module').then(m => m.LegalStatusModule)
+      },
+      {
+        path: 'dashboard',
+        loadChildren: () => import('../features/dashboard/dashboard.module').then(m => m.DashboardModule)
       }
     ]
   }

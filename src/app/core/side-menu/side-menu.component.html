@@ -1,8 +1,9 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-12">
-      <mat-drawer-container class="example-container" autosize style="position: absolute">
+      <button mat-raised-button routerLink="/economy/dashboard/tableDashboard" routerLinkActive="active"> Wróć do strony głównej </button>
 
+      <mat-drawer-container class="example-container" autosize style="position: absolute">
         <mat-drawer mode="side" opened>
           <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
             <!-- This is the tree node template for leaf nodes -->

@@ -11,7 +11,6 @@ import { SideMenuComponent } from './side-menu/side-menu.component';
 import { LoginComponent } from './auth/login/login.component';
 import { AdminComponent } from './auth/admin/admin.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 
@@ -21,8 +20,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     FooterComponent,
     SideMenuComponent,
     LoginComponent,
-    AdminComponent,
-    DashboardComponent
+    AdminComponent
   ],
   imports: [
     CommonModule,

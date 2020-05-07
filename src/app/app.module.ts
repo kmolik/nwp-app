@@ -14,7 +14,7 @@ import { UnAuthGuard } from './core/guards/un-auth.guard';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +34,7 @@ import { UnAuthGuard } from './core/guards/un-auth.guard';
       multi: true
     },
     AuthGuard,
-    UnAuthGuard
+    UnAuthGuard,
   ],
   bootstrap: [AppComponent]
 })
