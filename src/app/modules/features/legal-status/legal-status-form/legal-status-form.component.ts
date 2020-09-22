@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material';
+
 
 @Component({
   selector: 'app-legal-status-form',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LegalStatusFormComponent implements OnInit {
 
-  constructor() { }
 
-  ngOnInit(): void {
+  constructor(public dialog: MatDialog) { }
+
+  ngOnInit(): void {}
+
+  closeDialog() {
+    this.dialog.closeAll();
   }
-
 }

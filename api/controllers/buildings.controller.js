@@ -5,3 +5,11 @@ exports.getBuildings = (req, res) => {
     res.json(buildings)
   })
 }
+
+exports.deleteBuildings = (req, res) => {
+  buildings.destroy({
+    where: {id : req.params.id}
+  }).then(() => {
+    res.send('Item deleted')
+  })
+}
