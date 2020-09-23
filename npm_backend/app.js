@@ -7,9 +7,10 @@ const db = require('./db/models/users')
 const Role = db.role;
 
 const app = express()
-const port = 3000
+const port = 8080;
 
 app.use(cors())
+app.use(express.static('public'))
 
 //routes
 require('./routes/auth.routes')(app)
