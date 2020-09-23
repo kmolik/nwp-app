@@ -20,22 +20,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82dcf6d0-d7d5-483a-b9d7-cc6557d5fcbe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/nwp-app.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/npm_backend/controllers/buildings.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/npm_backend/controllers/buildings.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/npm_backend/routes/buildings.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/npm_backend/routes/buildings.routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/npm_backend/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/npm_backend/config/auth.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/npm_backend/config/db.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/npm_backend/controllers/auth.controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/npm_backend/controllers/buildings.controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/npm_backend/controllers/parcel.controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/npm_backend/controllers/user.controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/npm_backend/db/connection/connect.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/npm_backend/db/models/buildings.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/npm_backend/db/models/parcel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/npm_backend/db/models/users/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/npm_backend/db/models/users/role.model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/npm_backend/db/models/users/user.model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/npm_backend/middlewares/authJwt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/npm_backend/middlewares/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/npm_backend/middlewares/verifySignUp.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/npm_backend/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/npm_backend/routes/auth.routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/npm_backend/routes/buildings.routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/npm_backend/routes/parcel.routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/npm_backend/routes/user.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/npm_backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/npm_backend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/core/auth/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/auth/login/login.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/core/http/buildings.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/http/buildings.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/features/dashboard/table-dashboard/table-dashboard.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/features/dashboard/table-dashboard/table-dashboard.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/features/legal-status/legal-status-form/legal-status-form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/features/legal-status/legal-status-form/legal-status-form.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/features/legal-status/legal-status-form/legal-status-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/features/legal-status/legal-status-form/legal-status-form.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/modules/features/legal-status/legal-status-table/legal-status-table.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/features/legal-status/legal-status-table/legal-status-table.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/modules/features/legal-status/legal-status-table/legal-status-table.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/features/legal-status/legal-status-table/legal-status-table.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/modules/features/legal-status/legal-status-table/legal-status-table.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/features/legal-status/legal-status-table/legal-status-table.component.ts" afterDir="false" />
@@ -115,7 +124,7 @@
       <workItem from="1600330614937" duration="3760000" />
       <workItem from="1600410420454" duration="743000" />
       <workItem from="1600677300945" duration="4049000" />
-      <workItem from="1600760979367" duration="1276000" />
+      <workItem from="1600760979367" duration="2865000" />
     </task>
     <servers />
   </component>
@@ -142,21 +151,21 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1597145164321" />
-    <state width="1899" height="282" key="GridCell.Tab.0.bottom" timestamp="1600426692289">
+    <state width="1899" height="282" key="GridCell.Tab.0.bottom" timestamp="1600848264006">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1600426692289" />
-    <state width="1899" height="282" key="GridCell.Tab.0.center" timestamp="1600426692289">
+    <state width="1899" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1600848264006" />
+    <state width="1899" height="282" key="GridCell.Tab.0.center" timestamp="1600848264006">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1600426692289" />
-    <state width="1899" height="282" key="GridCell.Tab.0.left" timestamp="1600426692289">
+    <state width="1899" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1600848264006" />
+    <state width="1899" height="282" key="GridCell.Tab.0.left" timestamp="1600848264006">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1600426692289" />
-    <state width="1899" height="282" key="GridCell.Tab.0.right" timestamp="1600426692289">
+    <state width="1899" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1600848264006" />
+    <state width="1899" height="282" key="GridCell.Tab.0.right" timestamp="1600848264006">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1600426692289" />
+    <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1600848264006" />
   </component>
 </project>

@@ -1,13 +1,10 @@
-<<<<<<< Updated upstream
-import { Component, OnInit } from '@angular/core';
-=======
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 import { MatDialog } from '@angular/material';
 import { LegalStatusFormComponent } from '../legal-status-form/legal-status-form.component';
 import { Gallery, GalleryItem, ImageItem, ThumbnailsPosition, ImageSize } from 'ng-gallery';
 import { Lightbox } from 'ng-gallery/lightbox';
->>>>>>> Stashed changes
+
 
 @Component({
   selector: 'app-legal-status-table',
@@ -24,9 +21,6 @@ import { Lightbox } from 'ng-gallery/lightbox';
 })
 export class LegalStatusTableComponent implements OnInit {
 
-<<<<<<< Updated upstream
-  constructor() { }
-=======
   dataSource = ELEMENT_DATA;
   columnsToDisplay = ['Lp', 'buildingID', 'buildingType', 'buildYear', 'parcelNumber', 'Powiat', 'Gmina'];
   expandedElement: PeriodicElement | null;
@@ -40,16 +34,13 @@ export class LegalStatusTableComponent implements OnInit {
     public gallery: Gallery,
     public lightbox: Lightbox
     ) { }
->>>>>>> Stashed changes
+
 
   ngOnInit() {
     /** Basic Gallery Example */
 
     // Create gallery items
     this.items = this.imageData.map(item => new ImageItem({ src: item.srcUrl, thumb: item.previewUrl }));
-
-<<<<<<< Updated upstream
-=======
 
     /** Lightbox Example */
 
@@ -76,7 +67,7 @@ export class LegalStatusTableComponent implements OnInit {
   closeDialog() {
     this.dialog.closeAll();
   }
->>>>>>> Stashed changes
+
 }
 
 export interface PeriodicElement {
