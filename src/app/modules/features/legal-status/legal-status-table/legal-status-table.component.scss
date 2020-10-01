@@ -1,26 +1,68 @@
+
 .legal-status-table{
-  width: 100vw;
+  margin: 30px;
 }
 
-.div{
-  width: 700px
+
+table {
+  width: 100%;
 }
 
-.mat-header-cell{
-  width: 700px;
-  text-align: left;
-  padding: 15px;
+.building-table {
+  margin: 30px;
 }
 
-.mat-cell{
-  padding: 15px
+tr.example-detail-row {
+  height: 0;
 }
 
-.parcel-table{
-  margin: 30px
+tr.example-element-row:not(.example-expanded-row):hover {
+  background: whitesmoke;
 }
 
-.mat-raised-button__functional{
-  margin: 10px;
-  margin-left: 0;
+tr.example-element-row:not(.example-expanded-row):active {
+  background: #efefef;
 }
+
+.example-element-row td {
+  border-bottom-width: 0;
+}
+
+.example-element-detail {
+  overflow: hidden;
+  display: flex;
+}
+
+.example-element-diagram {
+
+  border: 2px solid black;
+  padding: 8px;
+  font-weight: lighter;
+  margin: 8px 0;
+  height: 220px;
+  width: 220px;
+}
+
+.example-element-symbol {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: normal;
+}
+
+.example-element-description {
+  padding: 16px;
+}
+
+.example-element-description-attribution {
+  opacity: 0.5;
+}
+
+.tableImg {
+  height: 200px;
+  width: 200px;
+}
+
+button {
+  margin-right: 1em;
+}
+

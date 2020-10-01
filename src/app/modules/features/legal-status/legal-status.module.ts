@@ -5,15 +5,16 @@ import { LegalStatusRoutingModule } from './legal-status-routing.module';
 import { MaterialModule } from 'src/app/core/material/material.module';
 import { LegalStatusFormComponent } from './legal-status-form/legal-status-form.component';
 
+
 @NgModule({
   declarations: [
     LegalStatusTableComponent,
     LegalStatusFormComponent
   ],
-  imports: [
-    CommonModule,
-    LegalStatusRoutingModule,
-    MaterialModule
-  ]
+    imports: [
+        CommonModule,
+        LegalStatusRoutingModule,
+        MaterialModule
+    ]
 })
 export class LegalStatusModule { }

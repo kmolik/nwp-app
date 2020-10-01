@@ -11,15 +11,8 @@ module.exports = function(app) {
   })
 
   app.get('/buildings',
-  //[authJwt.verifyToken],
+  [authJwt.verifyToken],
   controller.getBuildings
    )
-
-  app.delete('/buildings/delete/:id',
-    controller.deleteBuildings
-  )
-
   }
-
-
 

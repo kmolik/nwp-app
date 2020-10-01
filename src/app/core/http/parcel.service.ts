@@ -2,14 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Parcel } from '../models/parcel';
-import {environment} from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ParcelService {
 
-  private url = `${environment.apiUrl}/parcels`;
+  private url = 'http://localhost:3000/parcels';
 
   constructor(private http: HttpClient) {}
 

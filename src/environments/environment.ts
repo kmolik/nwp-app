@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://nwp-app.unicloud.pl'
+  apiUrl: 'http://localhost:3000'
 };
 
 

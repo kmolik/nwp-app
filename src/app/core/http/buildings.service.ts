@@ -3,14 +3,13 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Buildings } from '../models/buildings';
 import { StorageService } from '../services';
-import {environment} from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BuildingsService {
 
-  private url = `${environment.apiUrl}/buildings`;
+  private url = 'http://localhost:3000/buildings';
 
   constructor(
     private http: HttpClient,

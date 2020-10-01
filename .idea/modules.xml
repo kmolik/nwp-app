@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/nwp-app.iml" filepath="$PROJECT_DIR$/.idea/nwp-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/nwp-app-develop.iml" filepath="$PROJECT_DIR$/.idea/nwp-app-develop.iml" />
     </modules>
   </component>
 </project>
